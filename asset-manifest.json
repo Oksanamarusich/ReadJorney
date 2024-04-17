@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ReadJorney/static/css/main.cd2e038f.css",
-    "main.js": "/ReadJorney/static/js/main.0fab68f1.js",
-    "static/js/75.d01cded9.chunk.js": "/ReadJorney/static/js/75.d01cded9.chunk.js",
-    "index.html": "/ReadJorney/index.html",
-    "main.cd2e038f.css.map": "/ReadJorney/static/css/main.cd2e038f.css.map",
-    "main.0fab68f1.js.map": "/ReadJorney/static/js/main.0fab68f1.js.map",
-    "75.d01cded9.chunk.js.map": "/ReadJorney/static/js/75.d01cded9.chunk.js.map"
+    "main.css": "/ReadJourney/static/css/main.cd2e038f.css",
+    "main.js": "/ReadJourney/static/js/main.895bd2aa.js",
+    "static/js/75.f9c476eb.chunk.js": "/ReadJourney/static/js/75.f9c476eb.chunk.js",
+    "index.html": "/ReadJourney/index.html",
+    "main.cd2e038f.css.map": "/ReadJourney/static/css/main.cd2e038f.css.map",
+    "main.895bd2aa.js.map": "/ReadJourney/static/js/main.895bd2aa.js.map",
+    "75.f9c476eb.chunk.js.map": "/ReadJourney/static/js/75.f9c476eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.0fab68f1.js"
+    "static/js/main.895bd2aa.js"
   ]
 }
