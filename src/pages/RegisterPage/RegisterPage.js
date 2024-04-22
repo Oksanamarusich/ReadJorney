@@ -1,20 +1,40 @@
-import { Logo } from "components/Logo/Logo";
-import { RegisterForm } from "components/RegisterForm/RegisterForm";
-import mobile from "../../img/mobile1x.webp";
-import { StyledSpan, Title, Wrapper, WrapperPicture } from "./RegisterPage.styled";
+import { Logo } from 'components/Logo/Logo';
+import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+import mobile1x from '../../img/mobile1x.webp';
+import mobile2x from '../../img/mobile2x.webp';
+import desktop1x from '../../img/desktop1x.webp';
+import desktop2x from '../../img/desktop2x.webp';
+import {
+  StyledImg,
+  StyledSpan,
+  Title,
+  Wrapper,
+  WrapperPicture,
+} from './RegisterPage.styled';
 
 export default function RegisterPage() {
   return (
     <>
-    <Wrapper>
+      <Wrapper>
         <Logo />
-        <Title>Expand your mind,<br></br> reading <StyledSpan>a book</StyledSpan></Title>
-          <RegisterForm />
-          
+        <Title>
+          Expand your mind, reading <StyledSpan>a book</StyledSpan>
+        </Title>
+        <RegisterForm />
       </Wrapper>
       <WrapperPicture>
-        <img src={mobile} alt="mobile phone"/>
+        <picture>
+          <source
+            srcSet={`${mobile1x} 1x, ${mobile2x} 2x`}
+            media="(min-width: 375px)"
+          />
+          <source
+            srcSet={`${desktop1x} 1x, ${desktop2x} 2x`}
+            media="(min-width: 1440px)"
+          />
+          <StyledImg src={desktop1x} alt="mobile phone" />
+        </picture>
       </WrapperPicture>
-      </>
+    </>
   );
 }

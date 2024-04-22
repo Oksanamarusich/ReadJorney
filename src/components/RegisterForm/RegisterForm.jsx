@@ -1,50 +1,93 @@
 import { Formik } from 'formik';
-import { ButtonForm, StyledField, StyledForm, StyledLabel, StyledLink, WrapperButtonLink } from './RegisterForm.styled';
+import {
+  ButtonForm,
+  ErrMsg,
+  StyledField,
+  StyledForm,
+  StyledIcon,
+  StyledLabel,
+  StyledLink,
+  WrapperButtonLink,
+} from './RegisterForm.styled';
+import { Icon } from 'components/Icon';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/operations';
+import { RegisterSchema } from 'schemas/RegisterSchema';
+
+
 
 export const RegisterForm = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleSubmit = (values, actions) => {
+    dispatch(register(values));
+actions.resetForm();
+  }
   return (
     <>
       <Formik
         initialValues={{
-          firstName: '',
-          lastName: '',
+          name: '',
           email: '',
+          password: '',
         }}
-        onSubmit={values => {
-          console.log(values);
-        }}
+        validationSchema={RegisterSchema}
+        onSubmit={handleSubmit}
       >
-        <StyledForm>
-          <StyledLabel>
-            Name
+        <StyledForm autoComplete="off">
+          <StyledLabel htmlFor="name">
+            Name:
             <StyledField
+              id="name"
               type="text"
               name="name"
               placeholder="Ilona Ratushnyak"
+              autoComplete="off"
             />
+            <ErrMsg name="name" component="p" />
           </StyledLabel>
 
-          <StyledLabel>
-            Mail
+          <StyledLabel htmlFor="email">
+            Mail:
             <StyledField
+              id="email"
               type="email"
-              name="mail"
+              name="email"
               placeholder="Your@email.com"
+              autoComplete="off"
             />
+            <ErrMsg name="email" component="p" />
           </StyledLabel>
 
-          <StyledLabel>
-            Password
+          <StyledLabel htmlFor="password">
+            Password:
+            <StyledIcon
+              onClick={() => {
+                setPasswordShown(!passwordShown);
+              }}
+            >
+              {passwordShown ? (
+                <Icon name="eye" stroke="#F9F9F9" />
+              ) : (
+                <Icon name="eye-off" stroke="#F9F9F9" />
+              )}
+            </StyledIcon>
             <StyledField
+              id="password"
               name="password"
               placeholder="Yourpasswordhere"
-              type="text"
+              type={passwordShown ? 'text' : 'password'}
+              autoComplete="off"
             />
-                  </StyledLabel>
-                  <WrapperButtonLink>
-                  <ButtonForm type="submit">Registration</ButtonForm>
-                      <StyledLink to="/login">Already have an account?</StyledLink>
-                      </WrapperButtonLink>
+            <ErrMsg name="password" component="p" />
+          </StyledLabel>
+
+          <WrapperButtonLink>
+            <ButtonForm type="submit">Registration</ButtonForm>
+            <StyledLink to="/login">Already have an account?</StyledLink>
+          </WrapperButtonLink>
         </StyledForm>
       </Formik>
     </>

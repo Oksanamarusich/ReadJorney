@@ -7,12 +7,11 @@ export const theme = {
         backgroundInput: '#262626',
         darkTxtColor: ' #686868',
         backgroundButton: '#f9f9f9',
-        colorTxtButton:'#1f1f1f',
+        colorTxtButton: '#1f1f1f',
+        hoverInput:'rgba(249, 249, 249, 0.1)',
     },
     animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
     },
-    fonts: {
-       fontFamily:'Gilroy',
-    },
+    
 }
