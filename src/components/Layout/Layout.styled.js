@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 100%;
   padding: 20px;
+  background-color:${({ theme }) => theme.colors.primaryBgColor};
 
   @media only screen and (min-width: 375px) {
     max-width: 375px;
