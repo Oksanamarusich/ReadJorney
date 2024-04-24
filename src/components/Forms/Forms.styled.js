@@ -108,7 +108,11 @@ export const StyledLink = styled(Link)`
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: ${({ theme }) => theme.colors.darkTxtColor};
+  transition: color ${({ theme }) => theme.animation.transition};
 
+  &:hover {
+    color: ${({ theme }) => theme.colors.backgroundButton};
+  }
   @media only screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.28571;

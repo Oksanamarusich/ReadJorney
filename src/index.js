@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter basename="/ReadJourney">
       <ThemeProvider theme={theme}>
         <App />
-          <GlobalStyle />
+          <GlobalStyle/>
             <Toaster position="top-right" reverseOrder={false} />
       </ThemeProvider>
         </BrowserRouter>

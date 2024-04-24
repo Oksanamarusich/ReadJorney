@@ -21,4 +21,5 @@ export const WrapperIcons = styled.ul`
 
 export const ButtonMenu = styled.button`
 background-color:transparent;
+border:transparent;
 `
