@@ -8,46 +8,34 @@ import {
   StyledLabel,
   StyledLink,
   WrapperButtonLink,
-} from './RegisterForm.styled';
+} from './Forms.styled';
 import { Icon } from 'components/Icon';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/operations';
-import { RegisterSchema } from 'schemas/RegisterSchema';
+import { LoginSchema } from 'schemas/LoginSchema';
+import {login} from "../../redux/auth/operations"
 
 
 
-export const RegisterForm = () => {
+export const LoginForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(register(values));
+    dispatch(login(values));
 actions.resetForm();
   }
   return (
     <>
       <Formik
         initialValues={{
-          name: '',
           email: '',
           password: '',
         }}
-        validationSchema={RegisterSchema}
+        validationSchema={LoginSchema}
         onSubmit={handleSubmit}
       >
         <StyledForm autoComplete="off">
-          <StyledLabel htmlFor="name">
-            Name:
-            <StyledField
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Ilona Ratushnyak"
-              autoComplete="off"
-            />
-            <ErrMsg name="name" component="p" />
-          </StyledLabel>
 
           <StyledLabel htmlFor="email">
             Mail:
@@ -85,8 +73,8 @@ actions.resetForm();
           </StyledLabel>
 
           <WrapperButtonLink>
-            <ButtonForm type="submit">Registration</ButtonForm>
-            <StyledLink to="/login">Already have an account?</StyledLink>
+            <ButtonForm type="submit">Log In</ButtonForm>
+            <StyledLink to="/register">Don`t have an account?</StyledLink>
           </WrapperButtonLink>
         </StyledForm>
       </Formik>

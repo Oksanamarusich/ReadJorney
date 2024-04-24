@@ -77,4 +77,27 @@ button{
   border:transparent;
   cursor:pointer;
 }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  width:50%;
+  height:100vh;
+  background: ${({ theme }) => theme.colors.backgroundModalContent};
+  overflow: hidden;
+ 
+}
+.modal-overlay {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+}
 `;

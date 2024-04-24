@@ -25,6 +25,8 @@ export const StyledField = styled(Field)`
   letter-spacing: -0.02em;
   color: ${({ theme }) => theme.colors.mainTxtColor};
   outline: none;
+  transition: border-color ${({ theme }) => theme.animation.transition};
+
   &:hover {
     border: 1px solid ${({ theme }) => theme.colors.hoverInput};
   }
@@ -67,6 +69,16 @@ export const ButtonForm = styled.button`
   line-height: 1.28571;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.colorTxtButton};
+  transition: background-color ${({ theme }) => theme.animation.transition}
+    color ${({ theme }) => theme.animation.transition} border-color
+    ${({ theme }) => theme.animation.transition};
+
+  &:hover,
+  &:focus {
+    background-color: ${({ theme }) => theme.colors.primaryBgColor};
+    color: ${({ theme }) => theme.colors.mainTxtColor};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+  }
 
   @media only screen and (min-width: 768px) {
     padding: 16px 54px;
@@ -77,13 +89,13 @@ export const ButtonForm = styled.button`
   }
 `;
 export const WrapperButtonLink = styled.div`
-  margin-top: 20px;
+  margin-top: 14px;
   display: flex;
   align-items: center;
   gap: 14px;
 
   @media only screen and (min-width: 768px) {
-    margin-top: 82px;
+    margin-top: 68px;
     gap: 20px;
   }
 `;
@@ -105,9 +117,8 @@ export const StyledLink = styled(Link)`
 
 export const ErrMsg = styled(ErrorMessage)`
   position: absolute;
-  top: 15PX;
+  top: 15px;
   right: 8px;
-
   font-size: 14px;
   font-style: italic;
   color: red;

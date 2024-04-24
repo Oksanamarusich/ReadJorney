@@ -1,7 +1,11 @@
 import { styled } from 'styled-components';
 
 export const WrapperIcon = styled.div`
-  display: block;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:45px;
+  height:20px;
   @media only screen and (min-width: 768px) {
     display: none;
   }

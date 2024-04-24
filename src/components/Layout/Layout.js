@@ -1,14 +1,25 @@
-import { Loader } from "components/Loader/Loader"
-import { Suspense } from "react"
-import { Outlet } from "react-router-dom"
-import { Container } from "./Layout.styled"
+import { Header } from 'components/Header/Header';
+import { Loader } from 'components/Loader/Loader';
+import { useAuth } from 'hooks';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { Container } from './Layout.styled';
 
 export const Layout = () => {
-    return (
-        <Container>
-            <Suspense fallback={<Loader />}>
+  const isLoggedIn = useAuth();
+
+  return isLoggedIn ? (
+    <Container>
+      <Header />
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-        
-        </Container>)
-}
+    </Container>
+  ) : (
+    <Container>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
+    </Container>
+  );
+};

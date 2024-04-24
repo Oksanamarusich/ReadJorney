@@ -10,6 +10,10 @@ import { Provider } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 import { store, persistor } from "./redux/store";
 import { PersistGate } from 'redux-persist/integration/react';
+import ReactModal from 'react-modal';
+
+ ReactModal.setAppElement('#root');
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ThemeProvider theme={theme}>
         <App />
           <GlobalStyle />
-          <Toaster position="top-right" reverseOrder={false} />
+            <Toaster position="top-right" reverseOrder={false} />
       </ThemeProvider>
         </BrowserRouter>
         </PersistGate>

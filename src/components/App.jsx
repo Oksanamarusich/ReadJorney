@@ -5,10 +5,10 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const RecommendedPage = lazy(() =>
   import('../pages/RecommendedPage/RecommendedPage')
 );
-
 
 export const App = () => {
   return (
@@ -17,7 +17,6 @@ export const App = () => {
         <Route index element={<Navigate replace to="/register" />} />
         <Route
           path="/register"
-          // element={<RegisterPage
           element={
             <RestrictedRoute
               redirectTo="/recommended"
@@ -26,7 +25,17 @@ export const App = () => {
           }
         />
 
-        {/* <Route
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute
+              redirectTo="/recommended"
+              component={<LoginPage />}
+            />
+          }
+        />
+
+        <Route
           path="/recommended"
           element={
             <PrivateRoute
@@ -34,7 +43,7 @@ export const App = () => {
               component={<RecommendedPage />}
             />
           }
-        /> */}
+        />
       </Route>
     </Routes>
   );
