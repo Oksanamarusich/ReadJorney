@@ -1,27 +1,33 @@
 {
   "files": {
     "main.css": "/ReadJourney/static/css/main.cd2e038f.css",
-    "main.js": "/ReadJourney/static/js/main.6dd3eda6.js",
-    "static/js/342.93dd4c71.chunk.js": "/ReadJourney/static/js/342.93dd4c71.chunk.js",
-    "static/js/75.f9c476eb.chunk.js": "/ReadJourney/static/js/75.f9c476eb.chunk.js",
-    "static/js/705.9c7fcfc1.chunk.js": "/ReadJourney/static/js/705.9c7fcfc1.chunk.js",
+    "main.js": "/ReadJourney/static/js/main.df17f413.js",
+    "static/js/233.9a67e893.chunk.js": "/ReadJourney/static/js/233.9a67e893.chunk.js",
+    "static/js/139.890ca72b.chunk.js": "/ReadJourney/static/js/139.890ca72b.chunk.js",
+    "static/js/947.5d9346fa.chunk.js": "/ReadJourney/static/js/947.5d9346fa.chunk.js",
+    "static/js/306.e54662ff.chunk.js": "/ReadJourney/static/js/306.e54662ff.chunk.js",
     "static/media/Gilroy-Medium.eot": "/ReadJourney/static/media/Gilroy-Medium.b84941b7bdcce7cbba6d.eot",
     "static/media/Gilroy-Medium.ttf": "/ReadJourney/static/media/Gilroy-Medium.f9f832b0ed3f1ab138c9.ttf",
     "static/media/Gilroy-Bold.eot": "/ReadJourney/static/media/Gilroy-Bold.a732fed1bc6140852a0b.eot",
     "static/media/Gilroy-Bold.ttf": "/ReadJourney/static/media/Gilroy-Bold.b900325e44ec0c673e88.ttf",
+    "static/media/desktop2x.webp": "/ReadJourney/static/media/desktop2x.b195e2410f06f69250c5.webp",
     "static/media/Gilroy-Medium.woff": "/ReadJourney/static/media/Gilroy-Medium.2bc7f5d7ea77ee1bddb3.woff",
     "static/media/Gilroy-Bold.woff": "/ReadJourney/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
+    "static/media/mobile2x.webp": "/ReadJourney/static/media/mobile2x.db46c9b5603feb50d476.webp",
+    "static/media/desktop1x.webp": "/ReadJourney/static/media/desktop1x.2ff28bbac98e2e9591da.webp",
+    "static/media/sprite.svg": "/ReadJourney/static/media/sprite.8249a75bc8079159b47c216e7c95e770.svg",
     "static/media/mobile1x.webp": "/ReadJourney/static/media/mobile1x.7ecdbf1295c57b6e1d2a.webp",
-    "static/media/sprite.svg": "/ReadJourney/static/media/sprite.25718bfab1c3f084cac15c0da36fff2b.svg",
     "index.html": "/ReadJourney/index.html",
+    "static/media/Logo1x.webp": "/ReadJourney/static/media/Logo1x.02cd783f8dc88325b041.webp",
     "main.cd2e038f.css.map": "/ReadJourney/static/css/main.cd2e038f.css.map",
-    "main.6dd3eda6.js.map": "/ReadJourney/static/js/main.6dd3eda6.js.map",
-    "342.93dd4c71.chunk.js.map": "/ReadJourney/static/js/342.93dd4c71.chunk.js.map",
-    "75.f9c476eb.chunk.js.map": "/ReadJourney/static/js/75.f9c476eb.chunk.js.map",
-    "705.9c7fcfc1.chunk.js.map": "/ReadJourney/static/js/705.9c7fcfc1.chunk.js.map"
+    "main.df17f413.js.map": "/ReadJourney/static/js/main.df17f413.js.map",
+    "233.9a67e893.chunk.js.map": "/ReadJourney/static/js/233.9a67e893.chunk.js.map",
+    "139.890ca72b.chunk.js.map": "/ReadJourney/static/js/139.890ca72b.chunk.js.map",
+    "947.5d9346fa.chunk.js.map": "/ReadJourney/static/js/947.5d9346fa.chunk.js.map",
+    "306.e54662ff.chunk.js.map": "/ReadJourney/static/js/306.e54662ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.6dd3eda6.js"
+    "static/js/main.df17f413.js"
   ]
 }
