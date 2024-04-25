@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/947.17277e5e.chunk.js","mappings":"yKAAe,SAASA,IACpB,OAAQC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAEZ,C","sources":["pages/RecommendedPage/RecommendedPage.js"],"sourcesContent":["export default function RecommendedPage() {\n    return (<>\n    </>)\n}"],"names":["RecommendedPage","_jsx","_Fragment"],"sourceRoot":""}
