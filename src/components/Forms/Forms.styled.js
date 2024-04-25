@@ -63,6 +63,9 @@ export const ButtonForm = styled.button`
   padding: 12px 29px;
   width: 140px;
   height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme }) => theme.colors.backgroundButton};
   font-weight: 700;
   font-size: 14px;
@@ -92,6 +95,7 @@ export const WrapperButtonLink = styled.div`
   margin-top: 14px;
   display: flex;
   align-items: center;
+ 
   gap: 14px;
 
   @media only screen and (min-width: 768px) {

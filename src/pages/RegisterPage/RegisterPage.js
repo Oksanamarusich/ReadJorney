@@ -1,4 +1,3 @@
-import { Logo } from 'components/Logo/Logo';
 import { RegisterForm } from 'components/Forms/RegisterForm';
 import mobile1x from '../../img/mobile1x.webp';
 import mobile2x from '../../img/mobile2x.webp';
@@ -11,12 +10,13 @@ import {
   Wrapper,
   WrapperPicture,
 } from './RegisterPage.styled';
+import { LogoForm } from 'components/LogoForm/LogoForm';
 
 export default function RegisterPage() {
   return (
     <>
       <Wrapper>
-        <Logo />
+        <LogoForm />
         <Title>
           Expand your mind, reading <StyledSpan>a book</StyledSpan>
         </Title>

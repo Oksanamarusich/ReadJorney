@@ -2,11 +2,10 @@ import { NavLink } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const StyledNav = styled.nav`
- display:none;
+ 
 
 @media only screen and (min-width: 768px) {
-  display:block;
-    margin-right: auto;
+  display:none;
   }
 `;
 
@@ -16,10 +15,7 @@ export const StyledList = styled.ul`
   flex-direction: column;
   gap: 20px;
 
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    gap: 32px;
-  }
+
 `;
 
 export const StyledItem = styled.li``;
@@ -47,8 +43,5 @@ export const StyledNavLink = styled(NavLink)`
     border-radius: 8px;
   }
 
-  @media only screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: 1.25;
-  }
+  
 `;

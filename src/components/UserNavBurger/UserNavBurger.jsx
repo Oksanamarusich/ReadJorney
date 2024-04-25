@@ -1,7 +1,6 @@
-import { StyledList, StyledNav, StyledNavLink } from "./UserNav.styled";
+import { StyledList, StyledNav, StyledNavLink } from "./UserNavBurger.styled";
 
-
-export const UserNav = ({isOpen}) => {
+export const UserNavBurger = () => {
   return (
     <StyledNav>
     <StyledList>
