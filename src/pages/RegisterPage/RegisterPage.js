@@ -5,6 +5,7 @@ import desktop1x from '../../img/desktop1x.webp';
 import desktop2x from '../../img/desktop2x.webp';
 import {
   StyledImg,
+  StyledSection,
   StyledSpan,
   Title,
   Wrapper,
@@ -14,7 +15,7 @@ import { LogoForm } from 'components/LogoForm/LogoForm';
 
 export default function RegisterPage() {
   return (
-    <>
+    <StyledSection>
       <Wrapper>
         <LogoForm />
         <Title>
@@ -35,6 +36,6 @@ export default function RegisterPage() {
           <StyledImg src={desktop1x} alt="mobile phone" />
         </picture>
       </WrapperPicture>
-    </>
+    </StyledSection>
   );
 }

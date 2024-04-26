@@ -1,14 +1,21 @@
-import { LoginForm } from "components/Forms/LoginForm";
-import { StyledImg, StyledSpan, Title, Wrapper, WrapperPicture } from "pages/RegisterPage/RegisterPage.styled";
+import { LoginForm } from 'components/Forms/LoginForm';
+import {
+  StyledImg,
+  StyledSection,
+  StyledSpan,
+  Title,
+  Wrapper,
+  WrapperPicture,
+} from 'pages/RegisterPage/RegisterPage.styled';
 import mobile1x from '../../img/mobile1x.webp';
 import mobile2x from '../../img/mobile2x.webp';
 import desktop1x from '../../img/desktop1x.webp';
 import desktop2x from '../../img/desktop2x.webp';
-import { LogoForm } from "components/LogoForm/LogoForm";
+import { LogoForm } from 'components/LogoForm/LogoForm';
 
 export default function LoginPage() {
-    return (<>
-     
+  return (
+    <StyledSection>
       <Wrapper>
         <LogoForm />
         <Title>
@@ -29,6 +36,6 @@ export default function LoginPage() {
           <StyledImg src={desktop1x} alt="mobile phone" />
         </picture>
       </WrapperPicture>
-    
-    </>)
- }
+    </StyledSection>
+  );
+}

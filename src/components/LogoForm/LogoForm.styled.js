@@ -19,4 +19,8 @@ export const StyledImgForm = styled.img`
     display: block;
     margin-bottom: 157px;
   }
+
+   @media only screen and (min-width: 768px) {
+    margin-bottom: 107px;
+   }
 `;

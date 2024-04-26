@@ -43,7 +43,7 @@ console.log(user)
           <Icon name="menu-04" width="28px" height="28px" />
         </ButtonMenu>
         <LogOut/>
-        <Modal
+        {/* <Modal
           isOpen={modalIsOpen}
           // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
@@ -53,7 +53,7 @@ console.log(user)
           contentLabel="Modal"
         >
           <BurgerMenu closeModal={closeModal} />
-        </Modal>
+        </Modal> */}
       </WrapperIcons>
     </StyledHeader>
   );

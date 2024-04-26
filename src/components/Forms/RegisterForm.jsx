@@ -37,7 +37,7 @@ actions.resetForm();
       >
         <StyledForm autoComplete="off">
           <StyledLabel htmlFor="name">
-            Name:
+            
             <StyledField
               id="name"
               type="text"
@@ -49,7 +49,7 @@ actions.resetForm();
           </StyledLabel>
 
           <StyledLabel htmlFor="email">
-            Mail:
+            
             <StyledField
               id="email"
               type="email"
@@ -61,7 +61,7 @@ actions.resetForm();
           </StyledLabel>
 
           <StyledLabel htmlFor="password">
-            Password:
+            
             <StyledIcon
               onClick={() => {
                 setPasswordShown(!passwordShown);

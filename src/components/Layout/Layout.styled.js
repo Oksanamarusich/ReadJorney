@@ -15,7 +15,6 @@ export const Container = styled.div`
   }
   @media only screen and (min-width: 1440px) {
     max-width: 1440px;
-    display:flex;
-    gap:16px;
+    
   }
 `;

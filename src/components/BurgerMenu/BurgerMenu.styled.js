@@ -16,6 +16,10 @@ export const WrapperBurgerMenu = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media only screen and (min-width: 768px) {
+    display:none;
+  }
 `;
 
 export const ButtonIcon = styled.button`

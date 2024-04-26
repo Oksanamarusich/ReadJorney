@@ -3,20 +3,29 @@ import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const StyledForm = styled(Form)`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 8px;  */
 
   @media only screen and (min-width: 768px) {
-    gap: 14px;
+    /* gap: 14px; */
   }
 `;
 
+export const StyledLabel = styled.label`
+  position: relative;
+  /* font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.darkTxtColor}; */
+`;
+
 export const StyledField = styled(Field)`
+  margin-bottom: 8px;
   border-radius: 12px;
   padding: 14px 14px 14px 59px;
   width: 100%;
-
   background-color: ${({ theme }) => theme.colors.backgroundInput};
   border: transparent;
   font-weight: 500;
@@ -33,15 +42,21 @@ export const StyledField = styled(Field)`
 
   @media only screen and (min-width: 768px) {
     padding: 16px 16px 16px 65px;
+    margin-bottom: 14px;
+    width: 472px;
+    height: 50px;
+    font-size: 14px;
+  line-height: 1.28571;
   }
 `;
 
 export const StyledIcon = styled.i`
   position: absolute;
-  top: 50%;
-  right: 7%;
+  top: 80%;
+  right: 20%;
   width: 18px;
   height: 18px;
+  border: 0;
 
   @media only screen and (min-width: 768px) {
     width: 20px;
@@ -49,14 +64,7 @@ export const StyledIcon = styled.i`
   }
 `;
 
-export const StyledLabel = styled.label`
-  position: relative;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33333;
-  letter-spacing: -0.02em;
-  color: ${({ theme }) => theme.colors.darkTxtColor};
-`;
+
 
 export const ButtonForm = styled.button`
   border-radius: 30px;
@@ -92,16 +100,17 @@ export const ButtonForm = styled.button`
   }
 `;
 export const WrapperButtonLink = styled.div`
-  margin-top: 14px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
- 
   gap: 14px;
 
   @media only screen and (min-width: 768px) {
     margin-top: 68px;
     gap: 20px;
   }
+
+  
 `;
 
 export const StyledLink = styled(Link)`
