@@ -109,8 +109,6 @@ export const WrapperButtonLink = styled.div`
     margin-top: 68px;
     gap: 20px;
   }
-
-  
 `;
 
 export const StyledLink = styled(Link)`

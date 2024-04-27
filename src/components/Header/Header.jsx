@@ -5,7 +5,6 @@ import {
   ButtonUserBar,
   customStylesModal,
   StyledHeader,
-  StyledSpan,
   WrapperIcons,
 } from './Header.styled';
 import { Icon } from 'components/Icon';
@@ -37,13 +36,13 @@ console.log(user)
         <ButtonUserBar>
           <Icon name="block" fill="#262626" width="35px" height="35px" />
         </ButtonUserBar>
-        <StyledSpan>{user.name}</StyledSpan>
+        {/* <StyledSpan>{user.name}</StyledSpan> */}
 
         <ButtonMenu type="button" onClick={openModal}>
           <Icon name="menu-04" width="28px" height="28px" />
         </ButtonMenu>
         <LogOut/>
-        {/* <Modal
+        <Modal
           isOpen={modalIsOpen}
           // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
@@ -53,7 +52,7 @@ console.log(user)
           contentLabel="Modal"
         >
           <BurgerMenu closeModal={closeModal} />
-        </Modal> */}
+        </Modal>
       </WrapperIcons>
     </StyledHeader>
   );

@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
@@ -52,24 +52,17 @@ export const App = () => {
           }
             />
             <Route path="/" element={<Layout />}>
-                <Route index element={
-            <PrivateRoute
-              redirectTo="/register"
-              component={<RecommendedPage />}
-            />
-          } />
-               <Route
-          path="/recommended"
-          element={
-            <PrivateRoute
-              redirectTo="/recommended"
-              component={<RecommendedPage />}
-            />
-          }
-        />
-              
-             </Route>
-            
+              <Route
+                index
+                element={
+                  <PrivateRoute
+                    redirectTo="/register"
+                    component={<RecommendedPage />}
+                  />
+                }
+              />
+            </Route>
+           <Route path = "*" element = {<Navigate to = "/" />} />
         </Routes>
       </Suspense>)}
         
@@ -78,41 +71,3 @@ export const App = () => {
  
     
     
-//     <>
-//     { isRefreshing?(): ()}
-//     <Routes>
-//       <Route path="/" element={<Layout />}>
-//         <Route index element={<Navigate replace to="/register" />} />
-//         <Route
-//           path="/register"
-//           element={
-//             <RestrictedRoute
-//               redirectTo="/recommended"
-//               component={<RegisterPage />}
-//             />
-//           }
-//         />
-
-//         <Route
-//           path="/login"
-//           element={
-//             <RestrictedRoute
-//               redirectTo="/recommended"
-//               component={<LoginPage />}
-//             />
-//           }
-//         />
-
-//         <Route
-//           path="/recommended"
-//           element={
-//             <PrivateRoute
-//               redirectTo="/recommended"
-//               component={<RecommendedPage />}
-//             />
-//           }
-//         />
-//       </Route>
-//     </Routes>
-//   );
-// };
