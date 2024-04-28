@@ -52,8 +52,8 @@ export const StyledField = styled(Field)`
 
 export const StyledIcon = styled.i`
   position: absolute;
-  top: 80%;
-  right: 20%;
+  top: 50%;
+  right: 30%;
   width: 18px;
   height: 18px;
   border: 0;

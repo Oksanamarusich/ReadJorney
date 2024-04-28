@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 export const StyledHeader = styled.header`
+margin-bottom:10px;
   padding: 14px 20px;
   display: flex;
   justify-content: space-between;
@@ -10,6 +11,7 @@ export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.secondaryBgColor};
 
   @media only screen and (min-width: 768px) {
+    margin-bottom:16px;
     padding: 16px;
     justify-content: start;
     align-items: center;
