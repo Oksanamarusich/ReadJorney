@@ -78,9 +78,10 @@ line-height: 1.28571;
 letter-spacing: 0.02em;
 color: ${({ theme }) => theme.colors.mainTxtColor};
 white-space:nowrap;
- transition: background-color ${({ theme }) => theme.animation.transition}
-      color ${({ theme }) => theme.animation.transition} border-color
-      ${({ theme }) => theme.animation.transition};
+ transition: background-color ${({ theme }) => theme.animation.transition};
+       /* color ${({ theme }) => theme.animation.transition} ;
+       border-color
+      ${({ theme }) => theme.animation.transition};  */
 
     &:hover,
     &:focus {

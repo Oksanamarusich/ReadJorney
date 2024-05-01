@@ -3,8 +3,10 @@ import { RecommendedPageDashboard } from "components/RecommendedPageDashboard/Re
 import { StyledMain } from "./RecommendedPage.styled";
 
 export default function RecommendedPage() {
-    return (<StyledMain>
+    return (
+        <StyledMain>
         <RecommendedPageDashboard />
         <RecommendedBooks/>
-    </StyledMain>)
+        </StyledMain>
+    )
 }
