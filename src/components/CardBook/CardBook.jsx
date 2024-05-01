@@ -1,9 +1,12 @@
-export const CardBook = () => {
+import { AuthorBook, BooksItem, StyledImg, TitleBook } from "./CardBook.styled"
+
+export const CardBook = ({ book}) => {
+    const { imageUrl, title, author} = book;
     return (
-        <li>
-        <img />
-        <h3></h3>
-        <p></p>
-        </li>
+        <BooksItem>
+            <StyledImg src={imageUrl} alt={title}  />
+            <TitleBook>{title}</TitleBook>
+            <AuthorBook>{author}</AuthorBook>
+        </BooksItem>
     )
 }

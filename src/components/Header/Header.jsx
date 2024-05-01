@@ -5,6 +5,7 @@ import {
   ButtonUserBar,
   customStylesModal,
   StyledHeader,
+  StyledSpan,
   WrapperIcons,
 } from './Header.styled';
 import { Icon } from 'components/Icon';
@@ -18,7 +19,7 @@ import { useAuth } from 'hooks';
 export const Header = () => {
   const { user } = useAuth();
   const [modalIsOpen, setIsOpen] = useState(false);
-console.log(user)
+
   function openModal() {
     setIsOpen(true);
     //  document.body.style.overflow = 'hidden';
@@ -36,7 +37,7 @@ console.log(user)
         <ButtonUserBar>
           <Icon name="block" fill="#262626" width="35px" height="35px" />
         </ButtonUserBar>
-        {/* <StyledSpan>{user.name}</StyledSpan> */}
+         {/* <StyledSpan>{user.name}</StyledSpan>  */}
 
         <ButtonMenu type="button" onClick={openModal}>
           <Icon name="menu-04" width="28px" height="28px" />
