@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/ReadJourney/static/css/main.cd2e038f.css",
-    "main.js": "/ReadJourney/static/js/main.f5e0128f.js",
+    "main.js": "/ReadJourney/static/js/main.0726cb40.js",
     "static/js/233.d80e85a5.chunk.js": "/ReadJourney/static/js/233.d80e85a5.chunk.js",
     "static/js/139.bf573cf1.chunk.js": "/ReadJourney/static/js/139.bf573cf1.chunk.js",
-    "static/js/204.4d0c38e2.chunk.js": "/ReadJourney/static/js/204.4d0c38e2.chunk.js",
+    "static/js/106.382bbb96.chunk.js": "/ReadJourney/static/js/106.382bbb96.chunk.js",
     "static/js/306.e54662ff.chunk.js": "/ReadJourney/static/js/306.e54662ff.chunk.js",
     "static/media/Gilroy-Medium.eot": "/ReadJourney/static/media/Gilroy-Medium.b84941b7bdcce7cbba6d.eot",
     "static/media/Gilroy-Medium.ttf": "/ReadJourney/static/media/Gilroy-Medium.f9f832b0ed3f1ab138c9.ttf",
@@ -20,14 +20,14 @@
     "index.html": "/ReadJourney/index.html",
     "static/media/Logo1x.webp": "/ReadJourney/static/media/Logo1x.02cd783f8dc88325b041.webp",
     "main.cd2e038f.css.map": "/ReadJourney/static/css/main.cd2e038f.css.map",
-    "main.f5e0128f.js.map": "/ReadJourney/static/js/main.f5e0128f.js.map",
+    "main.0726cb40.js.map": "/ReadJourney/static/js/main.0726cb40.js.map",
     "233.d80e85a5.chunk.js.map": "/ReadJourney/static/js/233.d80e85a5.chunk.js.map",
     "139.bf573cf1.chunk.js.map": "/ReadJourney/static/js/139.bf573cf1.chunk.js.map",
-    "204.4d0c38e2.chunk.js.map": "/ReadJourney/static/js/204.4d0c38e2.chunk.js.map",
+    "106.382bbb96.chunk.js.map": "/ReadJourney/static/js/106.382bbb96.chunk.js.map",
     "306.e54662ff.chunk.js.map": "/ReadJourney/static/js/306.e54662ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.f5e0128f.js"
+    "static/js/main.0726cb40.js"
   ]
 }
