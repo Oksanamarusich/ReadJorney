@@ -44,7 +44,7 @@ body {
 img {
     display: block;
     max-width: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
   }
   
 h1,
