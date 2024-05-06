@@ -5,7 +5,6 @@ import {
   ButtonUserBar,
   customStylesModal,
   StyledHeader,
-  StyledSpan,
   WrapperIcons,
 } from './Header.styled';
 import { Icon } from 'components/Icon';
@@ -17,7 +16,7 @@ import { LogOut } from 'components/LogOut/LogOut';
 import { useAuth } from 'hooks';
 
 export const Header = () => {
-  const { user } = useAuth();
+
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {

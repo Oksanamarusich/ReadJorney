@@ -1,7 +1,6 @@
 import { BooksList } from "components/BooksList/BooksList"
 import { Icon } from "components/Icon"
-import { useSelector } from "react-redux"
-import { selectBooks } from "../../redux/books/selectors"
+
 import { Button, Title, WrapperButton, WrapperRecommendedBooks } from "./RecommendedBooks.styled"
 
 
