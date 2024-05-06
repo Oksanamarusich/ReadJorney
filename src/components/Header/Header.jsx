@@ -46,7 +46,6 @@ export const Header = () => {
         <LogOut/>
         <Modal
           isOpen={modalIsOpen}
-          // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           // className="modal-content"
           // overlayClassName="modal-overlay"

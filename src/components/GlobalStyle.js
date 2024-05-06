@@ -92,6 +92,18 @@ button{
   overflow: hidden;
  
 }
+.modal-content-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background: ${({ theme }) => theme.colors.backgroundModalContent};
+  overflow: hidden;
+ 
+}
 .modal-overlay {
   position: fixed;
   top:0;

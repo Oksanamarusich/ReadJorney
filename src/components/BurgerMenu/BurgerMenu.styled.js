@@ -27,4 +27,5 @@ export const ButtonIcon = styled.button`
   top: 30px;
   right: 60px;
   background-color: transparent;
+  border:0;
 `;
