@@ -5,7 +5,6 @@ import { Layout } from './Layout/Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from '../redux/auth/operations';
-import { GlobalStyle } from './GlobalStyle';
 import { Loader } from './Loader/Loader';
 import { useAuth } from 'hooks';
 
@@ -27,7 +26,7 @@ export const App = () => {
   }, [dispatch, isLoggedIn]);
   
   return (<>
-    <GlobalStyle />
+   
     {isRefreshing ? (
       <Loader />
     ) : (

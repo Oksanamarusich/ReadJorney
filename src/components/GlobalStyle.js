@@ -101,7 +101,7 @@ button{
   transform: translate(-50%, -50%);
   padding: 0;
   background: ${({ theme }) => theme.colors.backgroundModalContent};
-  overflow: hidden;
+  /* overflow: hidden; */
  
 }
 .modal-overlay {

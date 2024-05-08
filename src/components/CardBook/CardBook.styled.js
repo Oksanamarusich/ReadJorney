@@ -28,9 +28,11 @@ export const StyledImg = styled.img`
 `
 export const TitleBook = styled.h3`
 margin-bottom:2px;
-width:103px;
+width:137px;
 height:18px;
 overflow:hidden;
+text-overflow:ellipsis;
+white-space:wrap;
 font-weight: 700;
 font-size: 14px;
 line-height: 1.28571;

@@ -38,7 +38,7 @@ export const Header = () => {
         <ButtonUserBar>
           <Icon name="block" fill="#262626" width="35px" height="35px" />
         </ButtonUserBar>
-         <StyledSpan>{user.name}</StyledSpan> 
+         <StyledSpan></StyledSpan> 
 
         <ButtonMenu type="button" onClick={openModal}>
           <Icon name="menu-04" width="28px" height="28px" />
@@ -50,7 +50,7 @@ export const Header = () => {
           // className="modal-content"
           // overlayClassName="modal-overlay"
           style={customStylesModal}
-          contentLabel="Modal"
+          contentLabel="Modal burger menu"
         >
           <BurgerMenu closeModal={closeModal} />
         </Modal>

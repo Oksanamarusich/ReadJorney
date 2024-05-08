@@ -1,36 +1,36 @@
 import { ModalCardBook } from 'components/ModalCardBook/ModalCardBook';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import { AuthorBook, BooksItem, StyledImg, TitleBook } from "./CardBook.styled"
+import { AuthorBook, BooksItem, StyledImg, TitleBook } from './CardBook.styled';
 
-export const CardBook = ({ book}) => {
-    const { imageUrl, title, author } = book;
-     const [isModal, setIsModal] = useState(false);
- 
-    const openModal = () => {
+export const CardBook = ({ book }) => {
+  const { imageUrl, title, author } = book;
+  const [isModal, setIsModal] = useState(false);
+
+  const openModalCard = () => {
     setIsModal(true);
-    // document.body.style.overflow = 'hidden';
+     document.body.style.overflow = 'hidden';
   };
 
-  
-    const closeModal = () => {
+  const closeModalCard = () => {
     setIsModal(false);
-    // document.body.style.overflow = '';
+    document.body.style.overflow = '';
   };
-    return (
-        <BooksItem onClick={openModal}>
-            <StyledImg src={imageUrl} alt={title}  />
-            <TitleBook>{title}</TitleBook>
-            <AuthorBook>{author}</AuthorBook>
-             <Modal
+
+  return (
+    <BooksItem onClick={openModalCard}>
+      <StyledImg src={imageUrl} alt={title} />
+      <TitleBook>{title}</TitleBook>
+      <AuthorBook>{author}</AuthorBook>
+      <Modal
         isOpen={isModal}
+        onRequestClose={closeModalCard}
         className="modal-content-card"
         overlayClassName="modal-overlay"
-        contentLabel="Modal"
-        onRequestClose={closeModal}
+        contentLabel="Modal book"
       >
-                <ModalCardBook onClose={closeModal} book={book} />
+        <ModalCardBook onClose={closeModalCard} book={book} />
       </Modal>
-        </BooksItem>
-    )
-}
+    </BooksItem>
+  );
+};

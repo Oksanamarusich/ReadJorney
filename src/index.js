@@ -10,6 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import ReactModal from 'react-modal';
+import { GlobalStyle } from 'components/GlobalStyle';
 
 
 ReactModal.setAppElement('#root');
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter basename="/ReadJourney">
           <ThemeProvider theme={theme}>
             <App />
+            <GlobalStyle/>
           </ThemeProvider>
         </BrowserRouter>
       </PersistGate>
