@@ -3,8 +3,10 @@ import {
   ButtonForm,
   ErrMsg,
   StyledField,
+  StyledFieldError,
   StyledForm,
   StyledIcon,
+  StyledIconError,
   StyledLabel,
   StyledLink,
   WrapperButtonLink,
@@ -15,15 +17,14 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import { RegisterSchema } from 'schemas/RegisterSchema';
 
-
 export const RegisterForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
     dispatch(register(values));
-actions.resetForm();
-  }
+    actions.resetForm();
+  };
   return (
     <>
       <Formik
@@ -35,59 +36,101 @@ actions.resetForm();
         validationSchema={RegisterSchema}
         onSubmit={handleSubmit}
       >
-        <StyledForm autoComplete="off">
-          <StyledLabel htmlFor="name">
-            
-            <StyledField
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Ilona Ratushnyak"
-              autoComplete="off"
-            />
-            <ErrMsg name="name" component="p" />
-          </StyledLabel>
+        {({ values, errors }) => (
+          <StyledForm autoComplete="off">
+            {errors.name ? (
+              <StyledLabel>
+                <StyledFieldError
+                  id="name"
+                  type="text"
+                  name="name"
+                  autoComplete="off"
+                />
+                <StyledIconError>
+                  <Icon name="pajamas_error" stroke="#e90516" />
+                </StyledIconError>
+                <ErrMsg name="name" component="div" />
+              </StyledLabel>
+            ) : (
+              <StyledLabel>
+                <StyledField
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Ilona Ratushnyak"
+                  autoComplete="off"
+                />
+              </StyledLabel>)}
+                
+              
+          
+           
+            {errors.email ? (
+              <StyledLabel htmlFor="email">
+                <StyledFieldError
+                  id="email"
+                  type="email"
+                  name="email"
+                  autoComplete="off"
+                />
+                <StyledIconError>
+                  <Icon name="pajamas_error" stroke="#e90516" />
+                </StyledIconError>
+                <ErrMsg name="email" component="div" />
+              </StyledLabel>
+            ) : (
+              <StyledLabel htmlFor="email">
+                <StyledField
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Your@email.com"
+                  autoComplete="off"
+                />
+              </StyledLabel>
+            )}
+            {errors.password ? (
+              <StyledLabel htmlFor="password">
+                <StyledFieldError
+                  id="password"
+                  name="password"
+                  autoComplete="off"
+                />
+                <StyledIconError>
+                  <Icon name="pajamas_error" stroke="#e90516" />
+                </StyledIconError>
+                <ErrMsg name="password" component="div" />
+              </StyledLabel>
+            ) : (
+              <StyledLabel htmlFor="password">
+                <StyledIcon
+                  onClick={() => {
+                    setPasswordShown(!passwordShown);
+                  }}
+                >
+                  {passwordShown ? (
+                    <Icon name="eye" stroke="#F9F9F9" />
+                  ) : (
+                    <Icon name="eye-off" stroke="#F9F9F9" />
+                  )}
+                </StyledIcon>
+                <StyledField
+                  id="password"
+                  name="password"
+                  placeholder="Yourpasswordhere"
+                  type={passwordShown ? 'text' : 'password'}
+                  autoComplete="off"
+                />
+                <ErrMsg name="password" component="p" />
+              </StyledLabel>
+            )}
 
-          <StyledLabel htmlFor="email">
-            
-            <StyledField
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Your@email.com"
-              autoComplete="off"
-            />
-            <ErrMsg name="email" component="p" />
-          </StyledLabel>
-
-          <StyledLabel htmlFor="password">
-            
-            <StyledIcon
-              onClick={() => {
-                setPasswordShown(!passwordShown);
-              }}
-            >
-              {passwordShown ? (
-                <Icon name="eye" stroke="#F9F9F9" />
-              ) : (
-                <Icon name="eye-off" stroke="#F9F9F9" />
-              )}
-            </StyledIcon>
-            <StyledField
-              id="password"
-              name="password"
-              placeholder="Yourpasswordhere"
-              type={passwordShown ? 'text' : 'password'}
-              autoComplete="off"
-            />
-            <ErrMsg name="password" component="p" />
-          </StyledLabel>
-
-          <WrapperButtonLink>
-            <ButtonForm type="submit">Registration</ButtonForm>
-            <StyledLink to="/login">Already have an account?</StyledLink>
-          </WrapperButtonLink>
-        </StyledForm>
+            <WrapperButtonLink>
+              <ButtonForm type="submit">Registration</ButtonForm>
+              <StyledLink to="/login">Already have an account?</StyledLink>
+            </WrapperButtonLink>
+          </StyledForm>
+        )}
       </Formik>
     </>
   );
