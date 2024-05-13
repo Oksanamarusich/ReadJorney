@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ReadJourney/static/css/main.cd2e038f.css",
-    "main.js": "/ReadJourney/static/js/main.86688975.js",
-    "static/js/233.d80e85a5.chunk.js": "/ReadJourney/static/js/233.d80e85a5.chunk.js",
-    "static/js/139.bf573cf1.chunk.js": "/ReadJourney/static/js/139.bf573cf1.chunk.js",
+    "main.js": "/ReadJourney/static/js/main.cce8424d.js",
+    "static/js/233.8e2355a0.chunk.js": "/ReadJourney/static/js/233.8e2355a0.chunk.js",
+    "static/js/139.ea34f3c1.chunk.js": "/ReadJourney/static/js/139.ea34f3c1.chunk.js",
     "static/js/106.2f4eb11f.chunk.js": "/ReadJourney/static/js/106.2f4eb11f.chunk.js",
     "static/js/306.e54662ff.chunk.js": "/ReadJourney/static/js/306.e54662ff.chunk.js",
     "static/media/Gilroy-Medium.eot": "/ReadJourney/static/media/Gilroy-Medium.b84941b7bdcce7cbba6d.eot",
@@ -15,19 +15,19 @@
     "static/media/Gilroy-Bold.woff": "/ReadJourney/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
     "static/media/mobile2x.webp": "/ReadJourney/static/media/mobile2x.db46c9b5603feb50d476.webp",
     "static/media/desktop1x.webp": "/ReadJourney/static/media/desktop1x.2ff28bbac98e2e9591da.webp",
-    "static/media/sprite.svg": "/ReadJourney/static/media/sprite.674b8fd55b8b81f34d4a3a5b667a62bc.svg",
+    "static/media/sprite.svg": "/ReadJourney/static/media/sprite.9d64e9e5abb8f1b3ab2c40c18b229a90.svg",
     "static/media/mobile1x.webp": "/ReadJourney/static/media/mobile1x.7ecdbf1295c57b6e1d2a.webp",
     "index.html": "/ReadJourney/index.html",
     "static/media/Logo1x.webp": "/ReadJourney/static/media/Logo1x.02cd783f8dc88325b041.webp",
     "main.cd2e038f.css.map": "/ReadJourney/static/css/main.cd2e038f.css.map",
-    "main.86688975.js.map": "/ReadJourney/static/js/main.86688975.js.map",
-    "233.d80e85a5.chunk.js.map": "/ReadJourney/static/js/233.d80e85a5.chunk.js.map",
-    "139.bf573cf1.chunk.js.map": "/ReadJourney/static/js/139.bf573cf1.chunk.js.map",
+    "main.cce8424d.js.map": "/ReadJourney/static/js/main.cce8424d.js.map",
+    "233.8e2355a0.chunk.js.map": "/ReadJourney/static/js/233.8e2355a0.chunk.js.map",
+    "139.ea34f3c1.chunk.js.map": "/ReadJourney/static/js/139.ea34f3c1.chunk.js.map",
     "106.2f4eb11f.chunk.js.map": "/ReadJourney/static/js/106.2f4eb11f.chunk.js.map",
     "306.e54662ff.chunk.js.map": "/ReadJourney/static/js/306.e54662ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.86688975.js"
+    "static/js/main.cce8424d.js"
   ]
 }
