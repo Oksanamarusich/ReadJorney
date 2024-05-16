@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
@@ -17,38 +17,52 @@ const RecommendedPage = lazy(() =>
 export const App = () => {
   const dispatch = useDispatch();
   const { isLoggedIn, isRefreshing } = useAuth();
+  const [limit, setLimit] = useState(2);
+
+  const updateLimit = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 767) {
+      setLimit(2);
+    } else if (windowWidth <= 1023) {
+      setLimit(8);
+    } else {
+      setLimit(10);
+    }
+  };
 
   useEffect(() => {
+    updateLimit();
+
     if (isLoggedIn) {
       return;
     }
     dispatch(refreshUser());
   }, [dispatch, isLoggedIn]);
-  
-  return (<>
-   
-    {isRefreshing ? (
-      <Loader />
-    ) : (
-      <Suspense fallback={<Loader />}>
-        <Routes>
+
+  return (
+    <>
+      {isRefreshing ? (
+        <Loader />
+      ) : (
+        <Suspense fallback={<Loader />} limit={limit}>
+          <Routes>
             <Route
-          path="/register"
-          element={
-            <RestrictedRoute
-              redirectTo="/recommended"
-              component={<RegisterPage />}
+              path="/register"
+              element={
+                <RestrictedRoute
+                  redirectTo="/recommended"
+                  component={<RegisterPage />}
+                />
+              }
             />
-          }
-            />
-             <Route
-          path="/login"
-          element={
-            <RestrictedRoute
-              redirectTo="/recommended"
-              component={<LoginPage />}
-            />
-          }
+            <Route
+              path="/login"
+              element={
+                <RestrictedRoute
+                  redirectTo="/recommended"
+                  component={<LoginPage />}
+                />
+              }
             />
             <Route path="/" element={<Layout />}>
               <Route
@@ -56,17 +70,15 @@ export const App = () => {
                 element={
                   <PrivateRoute
                     redirectTo="/register"
-                    component={<RecommendedPage />}
+                    component={<RecommendedPage limit={limit} />}
                   />
                 }
               />
             </Route>
-           <Route path = "*" element = {<Navigate to = "/" />} />
-        </Routes>
-      </Suspense>)}
-        
-  </>)
-}
- 
-    
-    
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
+      )}
+    </>
+  );
+};

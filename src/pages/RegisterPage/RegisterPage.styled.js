@@ -66,6 +66,7 @@ export const WrapperPicture = styled.div`
   width: 100%;
   height: 351px;
   background-color: ${({ theme }) => theme.colors.secondaryBgColor};
+  /* transition: opsity .4s ease-out .2s */
 
   @media only screen and (min-width: 768px) {
     display: none;

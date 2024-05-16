@@ -9,6 +9,7 @@ const handelFulfilled = (state, action) => {
     state.isLoading = false;
     state.error = null;
     state.books = action.payload;
+    
 };
 
 const handelRejected = (state, action) => {
@@ -22,6 +23,7 @@ const bookSlice = createSlice({
         books: [],
         isLoading: false,
         error: null,
+        
     },
     extraReducers: (builder) => {
         builder.addCase(getRecommendedBooks.pending, handelPending)

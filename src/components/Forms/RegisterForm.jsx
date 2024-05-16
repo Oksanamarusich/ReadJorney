@@ -4,6 +4,7 @@ import {
   ErrMsg,
   StyledField,
   StyledFieldError,
+  StyledFieldValidate,
   StyledForm,
   StyledIcon,
   StyledIconError,
@@ -37,14 +38,14 @@ export const RegisterForm = () => {
         onSubmit={handleSubmit}
       >
         {({ values, errors }) => (
-          <StyledForm autoComplete="off">
+          <StyledForm>
             {errors.name ? (
               <StyledLabel>
                 <StyledFieldError
                   id="name"
                   type="text"
                   name="name"
-                  autoComplete="off"
+                  
                 />
                 <StyledIconError>
                   <Icon name="pajamas_error" stroke="#e90516" />
@@ -52,14 +53,16 @@ export const RegisterForm = () => {
                 <ErrMsg name="name" component="div" />
               </StyledLabel>
             ) : (
+             
               <StyledLabel>
                 <StyledField
                   id="name"
                   type="text"
                   name="name"
                   placeholder="Ilona Ratushnyak"
-                  autoComplete="off"
-                />
+                  
+                  />
+                   <ErrMsg name="name" component="div" />
               </StyledLabel>)}
                 
               
@@ -71,7 +74,7 @@ export const RegisterForm = () => {
                   id="email"
                   type="email"
                   name="email"
-                  autoComplete="off"
+                  
                 />
                 <StyledIconError>
                   <Icon name="pajamas_error" stroke="#e90516" />
@@ -85,7 +88,7 @@ export const RegisterForm = () => {
                   type="email"
                   name="email"
                   placeholder="Your@email.com"
-                  autoComplete="off"
+                  
                 />
               </StyledLabel>
             )}
@@ -94,7 +97,7 @@ export const RegisterForm = () => {
                 <StyledFieldError
                   id="password"
                   name="password"
-                  autoComplete="off"
+                  
                 />
                 <StyledIconError>
                   <Icon name="pajamas_error" stroke="#e90516" />
@@ -119,7 +122,7 @@ export const RegisterForm = () => {
                   name="password"
                   placeholder="Yourpasswordhere"
                   type={passwordShown ? 'text' : 'password'}
-                  autoComplete="off"
+                  
                 />
                 <ErrMsg name="password" component="p" />
               </StyledLabel>

@@ -18,7 +18,7 @@ import { useAuth } from 'hooks';
 
 export const Header = () => {
   const { user } = useAuth();
-  console.log(user);
+ console.log(user)
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
