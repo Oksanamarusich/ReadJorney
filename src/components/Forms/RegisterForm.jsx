@@ -4,7 +4,6 @@ import {
   ErrMsg,
   StyledField,
   StyledFieldError,
-  StyledFieldValidate,
   StyledForm,
   StyledIcon,
   StyledIconError,

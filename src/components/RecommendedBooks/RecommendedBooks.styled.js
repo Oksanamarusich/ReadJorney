@@ -65,4 +65,22 @@ export const Button = styled.button`
     width: 40px;
     height: 40px;
   }
+
+  
 `;
+
+export const ButtonDisabled = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media only screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }`

@@ -3,26 +3,14 @@ import { RecommendedPageDashboard } from 'components/RecommendedPageDashboard/Re
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRecommendedBooks } from '../../redux/books/operations';
-import { selectBooks } from '../../redux/books/selectors';
+import { selectBooks, selectTotalPages } from '../../redux/books/selectors';
 import { StyledMain } from './RecommendedPage.styled';
 
-export default function RecommendedPage({limit}) {
+export default function RecommendedPage({ limit }) {
   const dispatch = useDispatch();
   const books = useSelector(selectBooks);
+  const totalPages = useSelector(selectTotalPages);
   const [page, setPage] = useState(1);
-//     const [limit, setLimit] = useState(2);
-//     console.log(limit)
-
-//   const updateLimit = () => {
-//     const windowWidth = window.innerWidth;
-//     if (windowWidth <= 767) {
-//       setLimit(2); // Мобільний екран
-//     } else if (windowWidth <= 1023) {
-//       setLimit(8); // Планшет
-//     } else {
-//       setLimit(10); // Десктоп
-//     }
-//   };
 
   const handleNextButton = () => {
     setPage(prevState => prevState + 1);
@@ -32,12 +20,8 @@ export default function RecommendedPage({limit}) {
     setPage(prevState => prevState - 1);
   };
 
-//   useEffect(() => {
-//     updateLimit();
-//   }, []);
-
-    useEffect(() => {
-    dispatch(getRecommendedBooks({page, limit}));
+  useEffect(() => {
+    dispatch(getRecommendedBooks({ page, limit }));
   }, [dispatch, page, limit]);
   return (
     <StyledMain>
@@ -46,6 +30,8 @@ export default function RecommendedPage({limit}) {
         books={books}
         handlePrevButton={handlePrevButton}
         handleNextButton={handleNextButton}
+        page={page}
+        totalPages={totalPages}
       />
     </StyledMain>
   );

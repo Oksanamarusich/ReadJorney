@@ -14,11 +14,10 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import { UserNav } from 'components/UserNav/UserNav';
 import { LogOut } from 'components/LogOut/LogOut';
-import { useAuth } from 'hooks';
+
 
 export const Header = () => {
-  const { user } = useAuth();
- console.log(user)
+
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {

@@ -8,7 +8,8 @@ const handelPending = state => {
 const handelFulfilled = (state, action) => {
     state.isLoading = false;
     state.error = null;
-    state.books = action.payload;
+    state.books = action.payload.results;
+    state.totalPages = action.payload.totalPages;
     
 };
 
@@ -20,7 +21,8 @@ const handelRejected = (state, action) => {
 const bookSlice = createSlice({
     name: 'books',
     initialState: {
-        books: [],
+         books: [],
+        totalPages:0,
         isLoading: false,
         error: null,
         
