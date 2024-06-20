@@ -7,6 +7,7 @@ import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from '../redux/auth/operations';
 import { Loader } from './Loader/Loader';
 import { useAuth } from 'hooks';
+import { GlobalStyle } from './GlobalStyle';
 
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
@@ -44,7 +45,8 @@ export const App = () => {
       {isRefreshing ? (
         <Loader />
       ) : (
-        <Suspense fallback={<Loader />} limit={limit}>
+          <Suspense fallback={<Loader />} limit={limit}>
+            <GlobalStyle/>
           <Routes>
             <Route
               path="/register"

@@ -7,15 +7,17 @@ export const StyledSection = styled.section`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 
   @media only screen and (min-width: 768px) {
     padding: 32px;
   }
 
-  @media only screen and (min-width: 768px) {
-    flex-direction:row;
-    gap:16px;
+  @media only screen and (min-width: 1440px) {
+    flex-direction: row;
+    gap: 16px;
   }
 `;
 
@@ -32,8 +34,8 @@ export const Wrapper = styled.div`
 
   @media only screen and (min-width: 1440px) {
     padding: 40px 64px;
-    width: 47%;
-    height:736px;
+    width: 600px;
+    height: 736px;
   }
 `;
 
@@ -47,7 +49,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.mainTxtColor};
 
   @media only screen and (min-width: 768px) {
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 40px;
     width: 444px;
     height: 180px;
@@ -74,9 +76,8 @@ export const WrapperPicture = styled.div`
 
   @media only screen and (min-width: 1440px) {
     display: block;
-    padding: 80px 97px 0 98px;
-    width: 47%;
-     height:736px;
+    width: 600px;
+    height: 736px;
   }
 `;
 

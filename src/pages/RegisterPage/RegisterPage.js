@@ -18,8 +18,7 @@ export default function RegisterPage() {
     <StyledSection>
       <Wrapper>
         <LogoForm />
-        <Title>
-          Expand your mind, reading <StyledSpan>a book</StyledSpan>
+        <Title>Expand your mind, reading <StyledSpan>a book</StyledSpan>
         </Title>
         <RegisterForm />
       </Wrapper>

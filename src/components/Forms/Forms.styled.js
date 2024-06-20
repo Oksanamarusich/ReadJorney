@@ -4,6 +4,8 @@ import { styled } from 'styled-components';
 
 export const StyledForm = styled(Form)`
   position: relative;
+  display:flex;
+  flex-direction:column;
 
   @media only screen and (min-width: 768px) {
   }
@@ -11,18 +13,56 @@ export const StyledForm = styled(Form)`
 
 export const StyledLabel = styled.label`
   position: relative;
-  /* font-weight: 500;
+  display: flex;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.backgroundInput};
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-  color: ${({ theme }) => theme.colors.darkTxtColor}; */
+  color: ${({ theme }) => theme.colors.darkTxtColor};
+   transition: border-color ${({ theme }) => theme.animation.transition};
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.hoverInput};
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 16px;
+    margin-bottom: 14px;
+    width: 472px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 1.28571;
+  }
+`;
+
+export const StyledIcon = styled.i`
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  border: 0;
+
+  @media only screen and (min-width: 768px) {
+    top: 46%;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    top:50%;
+  }
 `;
 
 export const StyledField = styled(Field)`
-  margin-bottom: 8px;
-  border-radius: 12px;
-  padding: 14px 14px 14px 59px;
-  width: 100%;
+  padding-left: 10px;
   background-color: ${({ theme }) => theme.colors.backgroundInput};
   border: transparent;
   font-weight: 500;
@@ -32,10 +72,29 @@ export const StyledField = styled(Field)`
   color: ${({ theme }) => theme.colors.mainTxtColor};
   outline: none;
   transition: border-color ${({ theme }) => theme.animation.transition};
-
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.hoverInput};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.mainTxtColor};
   }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.28571;
+  }
+`;
+
+export const StyledLabelError = styled.label`
+position:relative;
+margin-bottom: 8px;
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.backgroundInput};
+  border: 1px solid ${({ theme }) => theme.colors.colorError};
+   font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.darkTxtColor};
 
   @media only screen and (min-width: 768px) {
     padding: 16px 16px 16px 65px;
@@ -45,28 +104,51 @@ export const StyledField = styled(Field)`
     font-size: 14px;
     line-height: 1.28571;
   }
+
+`
+
+export const StyledIconError = styled.i`
+  position: absolute;
+  top: 35%;
+  right: 13px;
+  width: 18px;
+  height: 18px;
+  @media only screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
+export const ErrMsg = styled(ErrorMessage)`
+  position: absolute;
+  top: 45px;
+  left: 14px;
+  z-index: 102;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.colorError};
+
+    @media only screen and (min-width: 768px) {
+      top: 50px;
+    }
+ 
 `;
 
 export const StyledFieldError = styled(Field)`
-  margin-bottom: 8px;
-  border-radius: 12px;
-  padding: 14px 14px 14px 59px;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.backgroundInput};
-  border: 1px solid ${({ theme }) => theme.colors.colorError};
+padding-left: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
   color: ${({ theme }) => theme.colors.mainTxtColor};
+  background-color: ${({ theme }) => theme.colors.backgroundInput};
+  border:transparent;
   outline: none;
-  transition: border-color ${({ theme }) => theme.animation.transition};
+ 
 
   @media only screen and (min-width: 768px) {
-    padding: 16px 16px 16px 65px;
-    margin-bottom: 14px;
-    width: 472px;
-    height: 50px;
     font-size: 14px;
     line-height: 1.28571;
   }
@@ -94,26 +176,6 @@ export const StyledFieldValidate = styled(Field)`
     height: 50px;
     font-size: 14px;
     line-height: 1.28571;
-  }
-`;
-
-export const StyledIcon = styled.i`
-  position: absolute;
-  top: 56%;
-  right: 16px;
-  width: 18px;
-  height: 18px;
-  border: 0;
-
-  @media only screen and (min-width: 768px) {
-    top: 46%;
-    right: 18px;
-    width: 20px;
-    height: 20px;
-  }
-
-  @media only screen and (min-width: 1440px) {
-    right: 90px;
   }
 `;
 
@@ -181,27 +243,6 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const ErrMsg = styled(ErrorMessage)`
-  position: absolute;
-  top: 35px;
-  left: 14px;
-  z-index:102;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: ${({ theme }) => theme.colors.colorError};
-`;
 
-export const StyledIconError = styled.i`
-position:absolute;
-top:0;
-right:13px;
-width:18px;
-height:18px;
-@media only screen and (min-width: 768px) {
-  width:20px;
-height:20px;
-}
 
-`
+
