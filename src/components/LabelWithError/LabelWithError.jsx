@@ -8,7 +8,7 @@ import {
 import { Icon } from 'components/Icon';
 
 export const LabelWithError = ({ name, children }) => {
-  const [field, meta] = useField(name);
+  const [, meta] = useField(name);
   const isSuccess = meta.touched && !meta.error;
   const isError = meta.touched && meta.error;
   return (

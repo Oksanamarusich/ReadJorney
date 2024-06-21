@@ -5,7 +5,6 @@ import {
   StyledField,
   StyledForm,
   StyledIcon,
-  StyledLabel,
   StyledLink,
   WrapperButtonLink,
 } from './Forms.styled';
@@ -14,6 +13,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { LoginSchema } from 'schemas/LoginSchema';
 import { login } from '../../redux/auth/operations';
+import { LabelWithError } from 'components/LabelWithError/LabelWithError';
 
 export const LoginForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -34,7 +34,8 @@ export const LoginForm = () => {
         onSubmit={handleSubmit}
       >
         <StyledForm autoComplete="off">
-          <StyledLabel htmlFor="email">
+          <LabelWithError name="email">
+            Mail:
             <StyledField
               id="email"
               type="email"
@@ -43,9 +44,10 @@ export const LoginForm = () => {
               autoComplete="off"
             />
             <ErrMsg name="email" component="div" />
-          </StyledLabel>
+          </LabelWithError>
 
-          <StyledLabel htmlFor="password">
+          <LabelWithError name="password">
+            Password:
             <StyledIcon
               onClick={() => {
                 setPasswordShown(!passwordShown);
@@ -65,7 +67,7 @@ export const LoginForm = () => {
               autoComplete="off"
             />
             <ErrMsg name="password" component="p" />
-          </StyledLabel>
+          </LabelWithError>
 
           <WrapperButtonLink>
             <ButtonForm type="submit">Log In</ButtonForm>

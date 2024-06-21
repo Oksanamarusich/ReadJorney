@@ -37,15 +37,13 @@ export const StyledLabel = styled.label`
   }
 `;
 
-
-
 export const StyledIconError = styled.i`
   position: absolute;
   top: 35%;
   right: 13px;
   width: 18px;
   height: 18px;
-  
+
   @media only screen and (min-width: 768px) {
     width: 20px;
     height: 20px;
@@ -58,7 +56,7 @@ export const StyledIconSuccess = styled.i`
   right: 13px;
   width: 18px;
   height: 18px;
-   
+
   @media only screen and (min-width: 768px) {
     width: 20px;
     height: 20px;
@@ -75,5 +73,4 @@ export const SuccessMessage = styled.div`
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: ${({ theme }) => theme.colors.colorValidate};
- 
 `;
