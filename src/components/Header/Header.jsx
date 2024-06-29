@@ -14,9 +14,12 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import { UserNav } from 'components/UserNav/UserNav';
 import { LogOut } from 'components/LogOut/LogOut';
+import { useAuth } from 'hooks';
 
 
 export const Header = () => {
+  const { user } = useAuth();
+  
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -37,7 +40,7 @@ export const Header = () => {
         <ButtonUserBar>
           <Icon name="block" fill="#262626" width="35px" height="35px" />
         </ButtonUserBar>
-         <StyledSpan></StyledSpan> 
+        <StyledSpan>{user.name}</StyledSpan> 
 
         <ButtonMenu type="button" onClick={openModal}>
           <Icon name="menu-04" width="28px" height="28px" />

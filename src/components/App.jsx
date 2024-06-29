@@ -34,9 +34,9 @@ export const App = () => {
   useEffect(() => {
     updateLimit();
 
-    if (isLoggedIn) {
-      return;
-    }
+    // if (isLoggedIn) {
+    //   return;
+    // }
     dispatch(refreshUser());
   }, [dispatch, isLoggedIn]);
 
